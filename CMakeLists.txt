@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(design-patterns-cpp20)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 20)
 
 include_directories(libs/boost/)
 
@@ -12,3 +12,10 @@ add_executable(ocp2 src/design-principles/ocp/Product2.cpp)
 add_executable(lsp src/design-principles/lsp/Rectangle.cpp)
 add_executable(isp src/design-principles/isp/Print.cpp)
 add_executable(dip src/design-principles/dip/Car.cpp)
+
+# 设计模式
+add_executable(html_builder src/design-patterns/builder/HtmlBuilder.cpp)
+add_executable(tag_builder src/design-patterns/builder/Tag.cpp)
+add_executable(person_builder src/design-patterns/builder/PersonBuilder.cpp)
+add_executable(email_builder src/design-patterns/builder/EmailBuilder.cpp)
+add_executable(person_builder_ext src/design-patterns/builder/PersonBuilderExt.cpp)
