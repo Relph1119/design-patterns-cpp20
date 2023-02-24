@@ -14,8 +14,17 @@ add_executable(isp src/design-principles/isp/Print.cpp)
 add_executable(dip src/design-principles/dip/Car.cpp)
 
 # 设计模式
+# 第2章 构造器模式
 add_executable(html_builder src/design-patterns/builder/HtmlBuilder.cpp)
 add_executable(tag_builder src/design-patterns/builder/Tag.cpp)
 add_executable(person_builder src/design-patterns/builder/PersonBuilder.cpp)
 add_executable(email_builder src/design-patterns/builder/EmailBuilder.cpp)
 add_executable(person_builder_ext src/design-patterns/builder/PersonBuilderExt.cpp)
+
+# 第3章 工厂方法和抽象工程模式
+add_executable(factory_method src/design-patterns/factory_method/main.cpp
+        src/design-patterns/factory_method/Wall.cpp
+        src/design-patterns/factory_method/Material.cpp
+        src/design-patterns/factory_method/SolidWall.cpp
+        src/design-patterns/factory_method/WallFactory.cpp)
+add_executable(abstract_factory src/design-patterns/abstract_factory/main.cpp)
