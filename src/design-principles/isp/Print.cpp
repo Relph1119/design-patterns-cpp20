@@ -66,3 +66,8 @@ struct MyFavouritePrinter : IMachine {
 
     void scan(vector<Document *> docs) override {};
 };
+
+int main() {
+
+    return 0;
+}

@@ -4,6 +4,8 @@ project(design-patterns-cpp20)
 set(CMAKE_CXX_STANDARD 20)
 
 include_directories(libs/boost/)
+include_directories(D:\\CppLibs\\Boost\\include\\boost-1_81)
+link_directories(D:\\CppLibs\\Boost\\lib)
 
 # 设计原则
 add_executable(srp src/design-principles/srp/Journal.cpp)
@@ -28,3 +30,9 @@ add_executable(factory_method src/design-patterns/factory_method/main.cpp
         src/design-patterns/factory_method/SolidWall.cpp
         src/design-patterns/factory_method/WallFactory.cpp)
 add_executable(abstract_factory src/design-patterns/abstract_factory/main.cpp)
+
+# 第4章 原型模式
+add_executable(contract_copy src/design-patterns/prototype/ContactCopy.cpp)
+add_executable(extended_address src/design-patterns/prototype/ExtendedAddress.cpp)
+add_executable(serialization_address src/design-patterns/prototype/SerializationAddress.cpp)
+add_executable(employee_factory src/design-patterns/prototype/EmployeeFactory.cpp)

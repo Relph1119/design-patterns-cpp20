@@ -7,4 +7,13 @@
 - C++20版本：gcc 12.2.0
 - Boost版本：1.81.0
 
+1. 编译Boost
+需要提前安装VS2019以上版本，打开`Developer Command Prompt for VS 2019`
+参考：https://blog.csdn.net/qq_36163982/article/details/122438593
+```shell
+cd D:\CppLibs\boost_1_81_0
+bootstrap msvc
+b2 install --build-type=complete threading=multi link=static toolset=msvc-14.2 --prefix="..\Boost"
+```
+
 ## 学习总结
