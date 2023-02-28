@@ -13,7 +13,7 @@
 ```shell
 cd D:\CppLibs\boost_1_81_0
 bootstrap msvc
-b2 install --build-type=complete threading=multi link=static toolset=msvc-14.2 --prefix="..\Boost"
+b2 install threading=multi link=static toolset=msvc-14.2 --prefix="..\Boost" debug release
 ```
 
 ## 学习总结

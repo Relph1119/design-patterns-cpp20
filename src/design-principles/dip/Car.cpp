@@ -38,7 +38,7 @@ struct ILogger {
 };
 
 struct ConsoleLogger : ILogger {
-    ConsoleLogger() {}
+    ConsoleLogger() = default;
 
     void Log(const string &s) override {
         cout << "LOG: " << s.c_str() << endl;

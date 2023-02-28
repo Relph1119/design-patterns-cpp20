@@ -22,9 +22,7 @@ private:
     friend class boost::serialization::access;
 
     template<class Ar>
-    void serialize(
-            Ar &ar,
-            const unsigned int version) {
+    void serialize(Ar &ar, const unsigned int version) {
         ar & street;
         ar & city;
         ar & suite;
@@ -32,9 +30,9 @@ private:
 
     friend ostream &operator<<(ostream &os, const Address &obj) {
         return os
-        << "street: " << obj.street
-        << " city: " << obj.city
-        << " suite: " << obj.suite;
+                << "street: " << obj.street
+                << " city: " << obj.city
+                << " suite: " << obj.suite;
     }
 };
 
@@ -49,8 +47,8 @@ public:
 
     friend ostream &operator<<(ostream &os, const Contact &obj) {
         return os
-        << "name: " << obj.name
-        << " works at " << *obj.address;
+                << "name: " << obj.name
+                << " works at " << *obj.address;
     }
 
 private:
@@ -63,7 +61,7 @@ private:
     }
 };
 
-template <typename T>
+template<typename T>
 T clone(T obj) {
     ostringstream oss;
     boost::archive::text_oarchive oa(oss);
@@ -79,7 +77,7 @@ T clone(T obj) {
 }
 
 int main() {
-//    Contact john{ "John Doe", new Address{"123 East Dr", "London"} };
+//    Contact john{"John Doe", new Address{"123 East Dr", "London"}};
 //
 //    Contact jane = clone(john);
 //    jane.name = "Jane";
