@@ -37,3 +37,9 @@ add_executable(creature composite/Creature.cpp)
 add_executable(graph composite/Graph.cpp)
 add_executable(neuron composite/Neuron.cpp)
 add_executable(composite_product composite/Product.cpp)
+
+# 第9章 装饰器模式
+add_executable(dynamics_shape decorator/DynamicsShape.cpp)
+add_executable(static_shape decorator/StaticShape.cpp)
+add_executable(logger decorator/Logger.cpp)
+add_executable(logger2 decorator/Logger2.cpp)
