@@ -27,3 +27,8 @@ add_executable(per_thread_singleton singleton/PerThreadSingleton.cpp)
 
 # 第6章 适配器模式
 add_executable(adapter adapter/AdapterGeometry.cpp)
+
+# 第7章 桥接模式
+add_executable(pimpl bridge/Person.cpp)
+add_executable(raster_renderer_bridge bridge/RasterRenderer.cpp)
+
