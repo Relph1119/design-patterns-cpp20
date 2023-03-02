@@ -1,4 +1,4 @@
-# 《C++20设计模式》读书笔记
+# 《C++20设计模式（第2版）》读书笔记
 
 书籍原版代码：https://github.com/Apress/design-patterns-modern-cpp20
 
