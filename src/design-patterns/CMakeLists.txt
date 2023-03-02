@@ -32,3 +32,8 @@ add_executable(adapter adapter/AdapterGeometry.cpp)
 add_executable(pimpl bridge/Person.cpp)
 add_executable(raster_renderer_bridge bridge/RasterRenderer.cpp)
 
+# 第8章 组合模式
+add_executable(creature composite/Creature.cpp)
+add_executable(graph composite/Graph.cpp)
+add_executable(neuron composite/Neuron.cpp)
+add_executable(composite_product composite/Product.cpp)
