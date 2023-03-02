@@ -43,3 +43,6 @@ add_executable(dynamics_shape decorator/DynamicsShape.cpp)
 add_executable(static_shape decorator/StaticShape.cpp)
 add_executable(logger decorator/Logger.cpp)
 add_executable(logger2 decorator/Logger2.cpp)
+
+# 第10章 外观模式
+add_executable(magic_square facade/MagicSquare.cpp)
