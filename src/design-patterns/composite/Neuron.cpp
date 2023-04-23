@@ -19,6 +19,7 @@ struct SomeNeurons {
             for (Neuron & to: other) {
                 from.out.push_back(&to);
                 to.in.push_back(&from);
+                std::cout << from.id << "->" << to.id << std::endl;
             }
         }
     }
@@ -46,25 +47,30 @@ struct Neuron : SomeNeurons<Neuron>{
     }
 };
 
-struct NeuronLayer : vector<Neuron> {
-    NeuronLayer() {
-        NeuronLayer(1);
-    }
+struct NeuronLayer : vector<Neuron>, SomeNeurons<Neuron> {
+    NeuronLayer() : NeuronLayer(1) {}
 
     NeuronLayer(int count) {
         while (count-- > 0) {
             emplace_back(Neuron{});
         }
     }
+
+    Neuron * begin() override {
+        return &(*vector<Neuron>::begin());
+    }
+
+    Neuron * end() override {
+        return &(*vector<Neuron>::end());
+    }
 };
 
-// TODO: 本代码不完整，运行还有问题
 int main() {
     Neuron neuron, neuron2;
     NeuronLayer layer, layer2;
     neuron.connect_to(neuron2);
     neuron2.connect_to(layer);
-    layer.begin()->connect_to(neuron);
-    layer.end()->connect_to(layer2);
+    layer.connect_to(neuron);
+    layer.connect_to(layer2);
     return 0;
 }
