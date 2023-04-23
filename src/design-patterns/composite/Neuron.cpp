@@ -15,8 +15,8 @@ class Neuron;
 template <typename Self>
 struct SomeNeurons {
     template<typename T> void connect_to(T &other) {
-        for (Neuron & from: *static_cast<Self*>(this)) {
-            for (Neuron & to: other) {
+        for (Self & from: *static_cast<Self*>(this)) {
+            for (Self & to: other) {
                 from.out.push_back(&to);
                 to.in.push_back(&from);
                 std::cout << from.id << "->" << to.id << std::endl;
